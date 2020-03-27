@@ -1,22 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import PageOne from 'components/PageOne'
-import PageTwo from 'components/PageTwo'
-
 Vue.use(Router)  // 在vue中注入Router
 
 const routes = [
-    {
-        path: '/pageone',
-        name: 'one',
-        component: PageOne
-    },
-    {
-        path: '/pagetwo',
-        name: 'two',
-        component: PageTwo
-    },
     // {
     //     path: '/Manage',
     //     name: 'Manage',

@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <SideBar />
+    <Header />
     <router-view />
   </div>
 </template>
 
 <script>
-import '@/common/style/common.scss'
+import '@/common/style/common.css'
 import '@/common/style/custom.scss'
-import SideBar from 'components/SideBar.vue'
+import Header from 'components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    SideBar
+    Header
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 #app {
   height: 100%;
-  width: 64px;
-  background-color: $menu-bg;
 }
 </style>
