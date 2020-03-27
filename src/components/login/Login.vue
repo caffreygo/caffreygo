@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'Login',
   data() {
@@ -58,7 +59,13 @@ export default {
       }
     };
   },
+  created() {},
+  computed: {
+    ...mapGetters('account', ['token'])
+  },
   methods: {
+    // 获取store内namespace为account下的setToken这个mutations方法
+    ...mapMutations('account', ['setToken']),
     onSubmit(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
@@ -66,14 +73,15 @@ export default {
           data.append('username', this.loginForm.username);
           data.append('password', this.loginForm.password);
           this.axios
-            .post('/test', data)
+            .post('/login', data)
             .then(res => {
               if (res.data.success) {
                 // this.$router.push({ path: "/date" });
-                this.$message.success(this.$t('message'));
-                console.log(this.$i18n.locale);
+                this.$message.success(this.$t('login.successTips'));
+                this.setToken(res.data.token);
+                console.log(this.token);
               } else {
-                this.$message.error('failure');
+                this.$message.error(this.$t('login.failedTips'));
               }
             })
             .catch(err => {

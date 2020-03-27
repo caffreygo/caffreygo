@@ -3,5 +3,7 @@
   "login.username": "username",
   "login.password": "password",
   "login.usernameTips": "please enter your username",
-  "login.passwordTips": "please enter your password"
+  "login.passwordTips": "please enter your password",
+  "login.successTips": "Login successful",
+  "login.failedTips": "Login failed"
 }

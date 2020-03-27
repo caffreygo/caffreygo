@@ -3,5 +3,7 @@
   "login.username": "用户名",
   "login.password": "密码",
   "login.usernameTips": "请输入您的用户名",
-  "login.passwordTips": "请输入您的密码"
+  "login.passwordTips": "请输入您的密码",
+  "login.successTips": "登录成功",
+  "login.failedTips": "登录失败"
 }
