@@ -138,3 +138,27 @@ h3 {
 .pr30{padding-right:30px !important}
 .pr50{padding-right:50px !important}
 .pr100{padding-right:100px !important}
+
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

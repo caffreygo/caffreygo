@@ -3,10 +3,10 @@
     <div class="menu">
       <el-menu
         :default-active="activeIndex"
-        class="el-menu-demo"
+        class="flex-container"
         mode="horizontal"
         @select="handleSelect"
-        background-color="#0087c2"
+        background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b"
       >
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: "PageHeader",
   data() {
     return {
       activeIndex: "1"
