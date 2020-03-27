@@ -1,40 +1,50 @@
 <template>
-  <div class="hello">
-    <h3>Page two</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <el-menu
+    default-active="1-4-1"
+    :collapse="true"
+    background-color="#545c64"
+  >
+    <el-submenu index="1">
+      <template slot="title">
+        <i class="el-icon-location"></i>
+        <span slot="title">导航一</span>
+      </template>
+      <el-menu-item-group>
+        <span slot="title">分组一</span>
+        <el-menu-item index="1-1">选项1</el-menu-item>
+        <el-menu-item index="1-2">选项2</el-menu-item>
+      </el-menu-item-group>
+      <el-menu-item-group title="分组2">
+        <el-menu-item index="1-3">选项3</el-menu-item>
+      </el-menu-item-group>
+      <el-submenu index="1-4">
+        <span slot="title">选项4</span>
+        <el-menu-item index="1-4-1">选项1</el-menu-item>
+      </el-submenu>
+    </el-submenu>
+    <el-menu-item index="2">
+      <i class="el-icon-menu"></i>
+      <span slot="title">导航二</span>
+    </el-menu-item>
+    <el-menu-item index="3" disabled>
+      <i class="el-icon-document"></i>
+      <span slot="title">导航三</span>
+    </el-menu-item>
+    <el-menu-item index="4">
+      <i class="el-icon-setting"></i>
+      <span slot="title">导航四</span>
+    </el-menu-item>
+  </el-menu>
 </template>
 
 <script>
 export default {
-  name: 'PageTwo',
-  data () {
-      return {
-          msg: 'page two'
-      }
+  name: "SideBar",
+  data() {
+    return {};
   }
-}
+};
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
