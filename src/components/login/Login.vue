@@ -60,7 +60,11 @@ export default {
     onSubmit(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          this.axios.post('/test',this.loginForm)
+          let data = new FormData();
+          data.append("username", this.loginForm.username);
+          data.append("password", this.loginForm.password);
+          this.axios
+            .post("/test", data)
             .then(res => {
               if (res.data.success) {
                 console.log(res.data.model);
