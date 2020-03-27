@@ -1,1 +1,5 @@
-export const gettersMsg = state => state.msg;
+const getters = {
+    gettersMsg: state => state.msg
+}
+
+export default getters

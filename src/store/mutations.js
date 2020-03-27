@@ -1,3 +1,7 @@
-export const mutationsMsg = (state, payload) => {
-    state.msg = payload.msg;
+const mutations = {
+    mutationsMsg: (state, payload) => {
+        state.msg = payload.msg;
+    }
 }
+
+export default mutations;

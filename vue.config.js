@@ -5,7 +5,7 @@ function resolve(dir){
 }
 module.exports={
     chainWebpack:(config)=>{
-        config.resolve.alias.set('@',resolve('./src')).set('components',resolve('./src/components')),
+        config.resolve.alias.set('@',resolve('./src')).set('@c',resolve('./src/components')).set('img',resolve('./src/common/images')),
         config.plugin('html').tap((args) => {
             args[0].title = 'OA';
             return args;

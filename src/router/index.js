@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)  // 在vue中注入Router
-import Login from 'components/login/Login'
-import HomePage from 'components/HomePage'
+import Login from '@c/login/Login'
+import HomePage from '@c/main/HomePage'
 
 
 const routes = [
