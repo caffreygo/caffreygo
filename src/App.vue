@@ -2,10 +2,13 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
   </div>
 </template>
 
 <script>
+import '@/common/style/common.scss'
+import '@/common/style/custom.scss'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {

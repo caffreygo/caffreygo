@@ -1,0 +1,140 @@
+@charset "utf-8";
+*{
+margin:0; padding:0;
+}
+
+body, html {
+    font-family: 'Roboto-Light','Microsoft Yahei', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+    height: 100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; font-family: 'Roboto-Light','Microsoft Yahei', Arial, Helvetica, sans-serif;; }
+fieldset, img { border: 0; }
+ul, ol, li { list-style: none; font-family:'Roboto-Light','Microsoft Yahei', Arial, Helvetica, sans-serif; }
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+address, caption, cite, code, dfn, em, strong, th, var, optgroup { font-style: normal; font-weight: normal; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+abbr, acronym { border: 0; font-variant: normal; }
+input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; background-color: #fff; border: none;}
+code, kbd, samp, tt { font-size: 100%; }
+a {
+    color: #005683;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #002436;
+    text-decoration: underline;
+}
+
+input, button, textarea{ *font-size: 100%;}
+ol, ul { list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table,tr,td { border-collapse: collapse; border-spacing: 0; margin:0;padding:0;color: #000000;}
+caption, th { text-align: left; }
+sup, sub { font-size: 100%; vertical-align: baseline; }
+
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+
+
+.fr { float: right;}
+.fl { float: left;}
+
+.ehn, .otw, .tow { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.clearfix { clear: both; zoom:1;}
+.clearfix:after { display: block; clear: both; content: "\0020"; visibility: hidden; height: 0; }
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.m5{margin:5px !important}
+.m10{margin:10px !important}
+.m20{margin:20px !important}
+
+.mt5{margin-top:5px !important}
+.mt10{margin-top:10px !important}
+.mt15{margin-top:15px !important}
+.mt20{margin-top:20px !important}
+.mt30{margin-top:30px !important}
+.mt50{margin-top:50px !important}
+.mt100{margin-top:100px !important}
+
+.mb5{margin-bottom:5px !important}
+.mb10{margin-bottom:10px !important}
+.mb20{margin-bottom:20px !important}
+.mb25{margin-bottom:25px !important}
+.mb30{margin-bottom:30px !important}
+.mb50{margin-bottom:50px !important}
+.mb100{margin-bottom:100px !important}
+
+.ml5{margin-left:5px !important}
+.ml10{margin-left:10px !important}
+.ml15{margin-left:15px !important}
+.ml20{margin-left:20px !important}
+.ml30{margin-left:30px !important}
+.ml50{margin-left:50px !important}
+.ml100{margin-left:100px !important}
+
+.mr5{margin-right:5px !important}
+.mr10{margin-right:10px !important}
+.mr20{margin-right:20px !important}
+.mr30{margin-right:30px !important}
+.mr50{margin-right:50px !important}
+.mr100{margin-right:100px !important}
+
+.p5{padding: 5px !important}
+.p10{padding:10px !important}
+.p20{padding:20px !important}
+
+.pt5{padding-top:5px !important}
+.pt10{padding-top:10px !important}
+.pt20{padding-top:20px !important}
+.pt30{padding-top:30px !important}
+.pt50{padding-top:50px !important}
+.pt100{padding-top:100px !important}
+
+.pb5{padding-bottom:5px !important}
+.pb10{padding-bottom:10px !important}
+.pb20{padding-bottom:20px !important}
+.pb30{padding-bottom:30px !important}
+.pb50{padding-bottom:50px !important}
+.pb100{padding-bottom:100px !important}
+
+.pl5{padding-left:5px !important}
+.pl10{padding-left:10px !important}
+.pl20{padding-left:20px !important}
+.pl30{padding-left:30px !important}
+.pl50{padding-left:50px !important}
+.pl100{padding-left:100px !important}
+
+.pr5{padding-right:5px !important}
+.pr10{padding-right:10px !important}
+.pr20{padding-right:20px !important}
+.pr30{padding-right:30px !important}
+.pr50{padding-right:50px !important}
+.pr100{padding-right:100px !important}

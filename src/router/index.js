@@ -1,20 +1,21 @@
 import Vue from 'vue'
-import Router from 'vue-router'  // 引入vue-router
+import Router from 'vue-router'
 
-// 引入要跳转的vue组件
-import Manage from '@/page/admin/Manage'
-import userList from '@/page/admin/userList'
-import addUser from '@/page/admin/addUser'
-import shopList from '@/page/admin/shopList'
-import addShop from '@/page/admin/addShop'
+import PageOne from 'components/PageOne'
+import PageTwo from 'components/PageTwo'
 
 Vue.use(Router)  // 在vue中注入Router
-// 配置路由路径
+
 const routes = [
     {
-        path: '/',
-        name: 'Login',
-        component: Login  // 需要跳转的组件
+        path: '/pageone',
+        name: 'one',
+        component: PageOne
+    },
+    {
+        path: '/pagetwo',
+        name: 'two',
+        component: PageTwo
     },
     // {
     //     path: '/Manage',
