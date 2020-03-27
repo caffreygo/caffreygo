@@ -67,7 +67,9 @@ export default {
             .post("/test", data)
             .then(res => {
               if (res.data.success) {
-                this.$router.push({ path: "/date" });
+                // this.$router.push({ path: "/date" });
+                this.$message.success(this.$t('message'))
+                console.log(this.$i18n.locale)
               } else {
                 this.$message.error("failure");
               }

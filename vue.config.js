@@ -13,11 +13,17 @@ module.exports = {
     },
 
     pluginOptions: {
-        'style-resources-loader': {
-            preProcessor: 'scss',
-            patterns: [
-                path.resolve(__dirname, 'src/common/style/variable.scss'),
-            ]
-        }
+      'style-resources-loader': {
+        preProcessor: 'scss',
+        patterns: [
+          'D:\\test-project\\src\\common\\style\\variable.scss'
+        ]
+      },
+      i18n: {
+        locale: 'zh',
+        fallbackLocale: 'zh',
+        localeDir: 'locales',
+        enableInSFC: true
+      }
     }
 }
