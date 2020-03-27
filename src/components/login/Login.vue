@@ -60,23 +60,12 @@ export default {
     onSubmit(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          axios
-            .post("/user/login", this.loginForm)
+          this.axios.post('/test',this.loginForm)
             .then(res => {
               if (res.data.success) {
-                if (res.data.usertype == "client") {
-                  window.location.href = "/my-post";
-                } else if (res.data.usertype == "finance") {
-                  window.location.href = "/clients";
-                } else {
-                  window.location.href = "/my-projects";
-                }
+                console.log(res.data.model);
               } else {
-                this.$message({
-                  message: "Incorrect username or password",
-                  type: "error",
-                  center: true
-                });
+                this.$message.error("failure");
               }
             })
             .catch(err => {
