@@ -1,3 +1,7 @@
 {
-    "message": "hello i18n !!"
+  "login": "Log in",
+  "login.username": "username",
+  "login.password": "password",
+  "login.usernameTips": "please enter your username",
+  "login.passwordTips": "please enter your password"
 }

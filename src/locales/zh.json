@@ -1,3 +1,7 @@
 {
-  "message": "你好 i18n !!"
+  "login": "登录",
+  "login.username": "用户名",
+  "login.password": "密码",
+  "login.usernameTips": "请输入您的用户名",
+  "login.passwordTips": "请输入您的密码"
 }

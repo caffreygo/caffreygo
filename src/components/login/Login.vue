@@ -9,20 +9,22 @@
         <el-form-item prop="username">
           <el-input
             v-model="loginForm.username"
-            placeholder="用户名"
+            :placeholder="$t('login.username')"
             @keyup.enter.native="onSubmit('loginForm')"
           ></el-input>
         </el-form-item>
         <el-form-item prop="password">
           <el-input
             v-model="loginForm.password"
-            placeholder="密码"
+            :placeholder="$t('login.password')"
             show-password
             @keyup.enter.native="onSubmit('loginForm')"
           ></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit('loginForm')">登录</el-button>
+          <el-button type="primary" @click="onSubmit('loginForm')">{{
+            $t('login')
+          }}</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -31,26 +33,26 @@
 
 <script>
 export default {
-  name: "Login",
+  name: 'Login',
   data() {
     return {
       loginForm: {
-        username: "",
-        password: ""
+        username: '',
+        password: ''
       },
       rules: {
         username: [
           {
             required: true,
-            message: "please enter user name",
-            trigger: "change"
+            message: this.$t('login.usernameTips'),
+            trigger: 'change'
           }
         ],
         password: [
           {
             required: true,
-            message: "please enter password",
-            trigger: "change"
+            message: this.$t('login.passwordTips'),
+            trigger: 'change'
           }
         ]
       }
@@ -61,17 +63,17 @@ export default {
       this.$refs[formName].validate(valid => {
         if (valid) {
           let data = new FormData();
-          data.append("username", this.loginForm.username);
-          data.append("password", this.loginForm.password);
+          data.append('username', this.loginForm.username);
+          data.append('password', this.loginForm.password);
           this.axios
-            .post("/test", data)
+            .post('/test', data)
             .then(res => {
               if (res.data.success) {
                 // this.$router.push({ path: "/date" });
-                this.$message.success(this.$t('message'))
-                console.log(this.$i18n.locale)
+                this.$message.success(this.$t('message'));
+                console.log(this.$i18n.locale);
               } else {
-                this.$message.error("failure");
+                this.$message.error('failure');
               }
             })
             .catch(err => {
@@ -107,13 +109,13 @@ export default {
     transform: translateX(-50%);
     padding: 2rem 1.5rem 1rem;
     width: 450px;
-    background: white;
+    background: $white;
     border-radius: 10px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     @media screen and (max-width: 767px) {
-        width: 80%;
-        max-width: 450px;
+      width: 80%;
+      max-width: 450px;
     }
     & h1 {
       font-size: 1.5rem;
