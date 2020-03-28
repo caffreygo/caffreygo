@@ -3,10 +3,15 @@ import Router from 'vue-router'
 
 Vue.use(Router)  // 在vue中注入Router
 import Login from '@c/login/Login'
-import HomePage from '@c/main/HomePage'
+import DateView from '@c/main/DateView'
+import PageHeader from '@c/main/PageHeader'
 
 
 const routes = [
+    {
+        path: '/',
+        redirect: '/login'
+    },
     {
         path: '/login',
         name: 'login',
@@ -15,7 +20,13 @@ const routes = [
     {
         path: '/date',
         name: '/date',
-        component: HomePage
+        meta: {
+            requireAuth: true
+        },
+        components: {
+            default: DateView,
+            header: PageHeader
+        }
     }
     // {
     //     path: '/Manage',
@@ -25,29 +36,32 @@ const routes = [
     //         path: '/userList',
     //         component: userList,
     //         meta: ['数据管理', '用户列表']
-    //     },
-    //     {
-    //         path: '/shopList',
-    //         component: shopList,
-    //         meta: ['数据管理', '商品列表']
-    //     },
-    //     {
-    //         path: '/addUser',
-    //         component: addUser,
-    //         meta: ['添加数据', '添加用户']
-    //     },
-    //     {
-    //         path: '/addShop',
-    //         component: addShop,
-    //         meta: ['添加数据', '添加商品']
     //     }
     //     ]
     // },
 ]
+
+
 // 将路径注入到Router中
 var router = new Router({
     'mode': 'history',
     routes
+})
+
+const isLogin = () => Boolean(localStorage.getItem('token'))
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(item => item.meta.requireAuth)) {
+        if (!isLogin()) {
+            next({
+                path: '/',
+                replace: true
+            })
+        } else {
+            next()
+        }
+    } else {
+        next()
+    }
 })
 // 导出路由
 export default router;

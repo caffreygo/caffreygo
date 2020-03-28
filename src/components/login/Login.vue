@@ -4,7 +4,7 @@
       <img src="../../common/images/logo-white.png" class="icon-logo" />
     </div>
     <div class="login-form-container">
-      <h1 k-label="loginTitle"></h1>
+      <h1>{{ $t('login.title') }}</h1>
       <el-form ref="loginForm" :model="loginForm" :rules="rules">
         <el-form-item prop="username">
           <el-input
@@ -76,10 +76,12 @@ export default {
             .post('/login', data)
             .then(res => {
               if (res.data.success) {
-                // this.$router.push({ path: "/date" });
                 this.$message.success(this.$t('login.successTips'));
-                this.setToken(res.data.token);
-                console.log(this.token);
+                let token = res.data.token;
+                if (token) {
+                  this.setToken(res.data.token);
+                }
+                this.$router.push({ path: '/date' });
               } else {
                 this.$message.error(this.$t('login.failedTips'));
               }

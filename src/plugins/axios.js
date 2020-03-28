@@ -2,7 +2,7 @@
 
 import Vue from 'vue';
 import axios from "axios";
-import store from '../store'
+import router from '../router';
 // import qs from 'qs';
 
 // Full config:  https://github.com/axios/axios#request-config
@@ -28,7 +28,7 @@ _axios.interceptors.request.use(
     //   config.headers['Content-Type'] ='application/x-www-form-urlencoded';
     //   config.data = qs.stringify(config.data);
     // }
-    const token = store.state.account.token;
+    const token = localStorage.getItem('token');
     if (token) {
       config.headers['Authorization'] = token;
     }
@@ -44,6 +44,13 @@ _axios.interceptors.request.use(
 _axios.interceptors.response.use(
   function (response) {
     // Do something with response data
+    if (!response.data.success) {
+      const isServerLogin = response.data.isLogin
+      if (!isServerLogin && router.history.current.path !== '/login') {
+        router.push('/login')
+      }
+    }
+
     return response;
   },
   function (error) {

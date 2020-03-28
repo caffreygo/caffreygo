@@ -1,5 +1,5 @@
 const state = {
-  token: ''
+  token: localStorage.getItem('token') ? localStorage.getItem('token') : ''
 }
 
 const getters = {
@@ -11,12 +11,7 @@ const getters = {
 const mutations = {
   setToken(state, token) {
     state.token = token
-  }
-}
-
-const actions = {
-  async setToken({ commit }, token) {
-    commit('setToken', token)
+    localStorage.setItem('token', token);
   }
 }
 
@@ -24,6 +19,5 @@ export default {
   namespaced: true,
   state,
   getters,
-  mutations,
-  actions
+  mutations
 }

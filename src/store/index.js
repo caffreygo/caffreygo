@@ -7,17 +7,4 @@ export default new Vuex.Store({
   modules: {
     account
   }
-  // state: {
-  // },
-  // mutations: {
-  // },
-  // actions: {
-  // },
-  // modules: {
-  // }
-  // state 存放状态
-  // mutations state成员操作  this.$store.commit('mutations func',param)
-  // getters 加工state成员给外界
-  // actions 异步操作  this.$store.dispatch('aEdit',{age:15})
-  // modules 模块化状态管理
 })
