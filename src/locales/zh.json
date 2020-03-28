@@ -6,5 +6,19 @@
   "login.usernameTips": "请输入您的用户名",
   "login.passwordTips": "请输入您的密码",
   "login.successTips": "登录成功",
-  "login.failedTips": "登录失败"
+  "login.failedTips": "登录失败",
+
+  "schedule": "日程",
+  "schedule.my": "我的日程",
+  "schedule.today": "今日待办",
+  "schedule.overview": "工作概况",
+  "schedule.all": "所有事项",
+
+  "reserve": "预约",
+
+  "document": "资料",
+
+  "forum": "论坛",
+
+  "food": "点餐"
 }

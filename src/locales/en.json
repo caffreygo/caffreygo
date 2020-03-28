@@ -6,5 +6,19 @@
   "login.usernameTips": "please enter your username",
   "login.passwordTips": "please enter your password",
   "login.successTips": "Login successful",
-  "login.failedTips": "Login failed"
+  "login.failedTips": "Login failed",
+
+  "schedule": "Schedule",
+  "schedule.my": "My schedule",
+  "schedule.today": "To Do Today",
+  "schedule.overview": "Job overview",
+  "schedule.all": "All",
+
+  "reserve": "预约",
+
+  "document": "资料",
+
+  "forum": "论坛",
+
+  "food": "点餐"
 }

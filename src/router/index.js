@@ -3,8 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router)  // 在vue中注入Router
 import Login from '@c/login/Login'
-import DateView from '@c/main/DateView'
-import PageHeader from '@c/main/PageHeader'
+import ScheduleView from '@c/ScheduleView'
+import PageHeader from '@c/PageHeader'
 
 
 const routes = [
@@ -18,13 +18,13 @@ const routes = [
         component: Login
     },
     {
-        path: '/date',
-        name: '/date',
+        path: '/schedule/my',
+        name: 'schedule',
         meta: {
             requireAuth: true
         },
         components: {
-            default: DateView,
+            default: ScheduleView,
             header: PageHeader
         }
     }
