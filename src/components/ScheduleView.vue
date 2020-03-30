@@ -4,7 +4,9 @@
       <el-col :sm="24" :md="12">
         <FullCalendar :events="events" />
       </el-col>
-      <el-col :sm="24" :md="12">222222222222222</el-col>
+      <el-col :sm="24" :md="12">
+        <el-button type="primary" @click="test">Test</el-button>
+      </el-col>
     </el-row>
   </div>
 </template>
