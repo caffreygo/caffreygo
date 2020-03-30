@@ -52,8 +52,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-container {
-  padding: 20px;
-  max-height: 600px;
-}
 </style>
