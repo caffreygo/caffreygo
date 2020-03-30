@@ -10,7 +10,8 @@
 </template>
 
 <script>
-import FullCalendar from './schedule/FullCalendar';
+// 组件懒加载
+const FullCalendar = ()=>import("./schedule/FullCalendar");
 export default {
   name: 'ScheduleView',
   data() {

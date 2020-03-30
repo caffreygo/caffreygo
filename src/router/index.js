@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)  // 在vue中注入Router
-import Login from '@c/login/Login'
-import ScheduleView from '@c/ScheduleView'
-import PageHeader from '@c/PageHeader'
+
+// 路由懒加载
+const Login = ()=>import("@c/login/Login")
+const PageHeader = ()=>import("@c/PageHeader")
+const ScheduleView = ()=>import("@c/ScheduleView")
 
 
 const routes = [
