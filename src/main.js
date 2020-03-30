@@ -2,12 +2,12 @@ import Vue from 'vue'
 import router from './router'
 import store from './store'
 import './plugins/axios'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ELEMENT from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue'
 import i18n from './plugins/i18n'
 
-Vue.use(ElementUI);
+Vue.use(ELEMENT);
 Vue.config.productionTip = false
 
 new Vue({
