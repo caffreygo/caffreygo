@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   background-color: #545c64;
-  & .menu {
+  .menu {
     float: right;
   }
 }

@@ -45,9 +45,10 @@ _axios.interceptors.response.use(
   function (response) {
     // Do something with response data
     if (!response.data.success) {
-      const isServerLogin = response.data.isLogin
+      const isServerLogin = (response.headers.islogin && response.headers.islogin==="True")
+      console.log(isServerLogin)
       if (!isServerLogin && router.history.current.path !== '/login') {
-        router.push('/login')
+        router.push('xn')
       }
     }
 
