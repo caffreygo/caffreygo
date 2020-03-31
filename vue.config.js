@@ -5,6 +5,14 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 module.exports = {
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://oa.jinrui.kooboo.site',
+        changeOrigin: true
+      }
+    }
+  },
   configureWebpack: {
     externals: {
       'vue': 'Vue',
