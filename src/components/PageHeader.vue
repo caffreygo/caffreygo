@@ -12,28 +12,24 @@
         active-text-color="#ffd04b"
       >
         <el-submenu index="schedule">
-          <template slot="title">{{ $t('schedule') }}</template>
-          <el-menu-item index="schedule/my">{{ $t('schedule.my')}}</el-menu-item>
+          <template slot="title">{{ $t("schedule") }}</template>
+          <el-menu-item index="schedule/my">{{
+            $t("schedule.my")
+          }}</el-menu-item>
           <el-menu-item index="schedule/today">
-            {{
-            $t('schedule.today')
-            }}
+            {{ $t("schedule.today") }}
           </el-menu-item>
           <el-menu-item index="schedule/overview">
-            {{
-            $t('schedule.overview')
-            }}
+            {{ $t("schedule.overview") }}
           </el-menu-item>
           <el-menu-item index="schedule/all">
-            {{
-            $t('schedule.all')
-            }}
+            {{ $t("schedule.all") }}
           </el-menu-item>
         </el-submenu>
-        <el-menu-item index="reserve">{{ $t('reserve') }}</el-menu-item>
-        <el-menu-item index="document">{{ $t('document') }}</el-menu-item>
-        <el-menu-item index="forum">{{ $t('forum') }}</el-menu-item>
-        <el-menu-item index="food">{{ $t('food') }}</el-menu-item>
+        <el-menu-item index="reserve">{{ $t("reserve") }}</el-menu-item>
+        <el-menu-item index="document">{{ $t("document") }}</el-menu-item>
+        <el-menu-item index="forum">{{ $t("forum") }}</el-menu-item>
+        <el-menu-item index="food">{{ $t("food") }}</el-menu-item>
       </el-menu>
     </div>
   </div>
@@ -41,26 +37,26 @@
 
 <script>
 export default {
-  name: "PageHeader",
-  data() {
+  name: 'PageHeader',
+  data () {
     return {
-      activeIndex: "schedule/my"
-    };
+      activeIndex: 'schedule/my'
+    }
   },
   computed: {
-    path() {
-      return this.$route;
+    path () {
+      return this.$route
     }
   },
-  created() {
-    console.log(this.path);
+  created () {
+    console.log(this.path)
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
