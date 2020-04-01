@@ -22,5 +22,4 @@ export default new VueI18n({
   messages: loadLocaleMessages()
 })
 
-
 // this.$i18n.locale = 'en'可以显示获取和设置，或者通过浏览器cookie自动设置

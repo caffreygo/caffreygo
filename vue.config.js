@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require('path')
 // const isProduction = process.env.NODE_ENV === 'production';
-function resolve(dir) {
-  return path.join(__dirname, dir);
+function resolve (dir) {
+  return path.join(__dirname, dir)
 }
 module.exports = {
   devServer: {
@@ -27,7 +27,7 @@ module.exports = {
   },
   configureWebpack: {
     externals: {
-      'vue': 'Vue',
+      vue: 'Vue',
       'element-ui': 'ELEMENT'
     }
   },
@@ -35,11 +35,11 @@ module.exports = {
     config.resolve.alias
       .set('@', resolve('./src'))
       .set('@c', resolve('./src/components'))
-      .set('img', resolve('./src/common/images')),
-    config.plugin('html').tap(args => {
-      args[0].title = 'OA';
-      return args;
+      .set('img', resolve('./src/common/images'))
+    config.plugin('html').tap(options => {
+      options[0].title = 'OA'
+      return options
     })
-    config.entry.app = ["babel-polyfill", "./src/main.js"]
+    config.entry.app = ['babel-polyfill', './src/main.js']
   }
-};
+}

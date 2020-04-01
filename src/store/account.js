@@ -9,9 +9,9 @@ const getters = {
 }
 
 const mutations = {
-  setToken(state, token) {
+  setToken (state, token) {
     state.token = token
-    localStorage.setItem('token', token);
+    localStorage.setItem('token', token)
   }
 }
 

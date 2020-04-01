@@ -13,18 +13,22 @@
       >
         <el-submenu index="schedule">
           <template slot="title">{{ $t('schedule') }}</template>
-          <el-menu-item index="schedule/my">{{
-            $t('schedule.my')
-          }}</el-menu-item>
-          <el-menu-item index="schedule/today">{{
+          <el-menu-item index="schedule/my">{{ $t('schedule.my')}}</el-menu-item>
+          <el-menu-item index="schedule/today">
+            {{
             $t('schedule.today')
-          }}</el-menu-item>
-          <el-menu-item index="schedule/overview">{{
+            }}
+          </el-menu-item>
+          <el-menu-item index="schedule/overview">
+            {{
             $t('schedule.overview')
-          }}</el-menu-item>
-          <el-menu-item index="schedule/all">{{
+            }}
+          </el-menu-item>
+          <el-menu-item index="schedule/all">
+            {{
             $t('schedule.all')
-          }}</el-menu-item>
+            }}
+          </el-menu-item>
         </el-submenu>
         <el-menu-item index="reserve">{{ $t('reserve') }}</el-menu-item>
         <el-menu-item index="document">{{ $t('document') }}</el-menu-item>
@@ -37,10 +41,10 @@
 
 <script>
 export default {
-  name: 'PageHeader',
+  name: "PageHeader",
   data() {
     return {
-      activeIndex: 'schedule/my'
+      activeIndex: "schedule/my"
     };
   },
   computed: {

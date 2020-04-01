@@ -32,10 +32,10 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'Login',
-  data() {
+  data () {
     return {
       loginForm: {
         username: '',
@@ -57,46 +57,46 @@ export default {
           }
         ]
       }
-    };
+    }
   },
-  created() {},
+  created () {},
   computed: {
     ...mapGetters('account', ['token'])
   },
   methods: {
     // 获取store内namespace为account下的setToken这个mutations方法
     ...mapMutations('account', ['setToken']),
-    onSubmit(formName) {
+    onSubmit (formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          let data = new FormData();
-          data.append('username', this.loginForm.username);
-          data.append('password', this.loginForm.password);
+          const data = new FormData()
+          data.append('username', this.loginForm.username)
+          data.append('password', this.loginForm.password)
           this.axios
             .post('/login', data)
             .then(res => {
               if (res.data.success) {
-                this.$message.success(this.$t('login.successTips'));
-                let token = res.data.token;
+                this.$message.success(this.$t('login.successTips'))
+                const token = res.data.token
                 if (token) {
-                  this.setToken(res.data.token);
+                  this.setToken(res.data.token)
                 }
-                this.$router.push({ name: 'schedule' });
+                this.$router.push({ name: 'schedule' })
               } else {
-                this.$message.error(this.$t('login.failedTips'));
+                this.$message.error(this.$t('login.failedTips'))
               }
             })
             .catch(err => {
-              console.log(err);
-            });
+              console.log(err)
+            })
         }
-      });
+      })
     },
-    resetForm: function(formName) {
-      this.$refs[formName].resetFields();
+    resetForm: function (formName) {
+      this.$refs[formName].resetFields()
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
