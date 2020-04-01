@@ -4,9 +4,9 @@ import Router from 'vue-router'
 Vue.use(Router)  // 在vue中注入Router
 
 // 路由懒加载
-const Login = ()=>import("@c/login/Login")
-const PageHeader = ()=>import("@c/PageHeader")
-const ScheduleView = ()=>import("@c/ScheduleView")
+const Login = () => import("@c/login/Login")
+const PageHeader = () => import("@c/PageHeader")
+const ScheduleView = () => import("@c/ScheduleView")
 
 
 const routes = [

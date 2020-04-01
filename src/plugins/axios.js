@@ -11,7 +11,7 @@ import router from '../router';
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 let config = {
-  baseURL: 'http://oa.jinrui.kooboo.site/api',
+  baseURL: '/api',
   timeout: 60 * 1000,
   withCredentials: true,
   // baseURL: process.env.baseURL || process.env.apiUrl || ""
@@ -45,7 +45,7 @@ _axios.interceptors.response.use(
   function (response) {
     // Do something with response data
     if (!response.data.success) {
-      const isServerLogin = (response.headers.islogin && response.headers.islogin==="True")
+      const isServerLogin = (response.headers.islogin && response.headers.islogin === "True")
       console.log(isServerLogin)
       if (!isServerLogin && router.history.current.path !== '/login') {
         router.push('xn')
