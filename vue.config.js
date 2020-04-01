@@ -18,6 +18,9 @@ module.exports = {
       'vue': 'Vue',
       'element-ui': 'ELEMENT'
     }
+    // entry: {
+    //   app: ["babel-polyfill", "./src/main.js"]
+    // }
   },
   productionSourceMap: false,
   chainWebpack: config => {
@@ -25,10 +28,11 @@ module.exports = {
       .set('@', resolve('./src'))
       .set('@c', resolve('./src/components'))
       .set('img', resolve('./src/common/images')),
-      config.plugin('html').tap(args => {
-        args[0].title = 'OA';
-        return args;
-      });
+    config.plugin('html').tap(args => {
+      args[0].title = 'OA';
+      return args;
+    })
+    config.entry.app = ["babel-polyfill", "./src/main.js"]
   },
 
   pluginOptions: {
