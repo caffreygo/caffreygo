@@ -46,7 +46,7 @@ const routes = [
 
 // 将路径注入到Router中
 var router = new Router({
-    'mode': 'history',
+    'mode': 'hash',
     routes
 })
 

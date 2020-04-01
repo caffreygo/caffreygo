@@ -8,12 +8,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-<<<<<<< HEAD
-        target: '',
-        ws: true,
-=======
         target: 'http://oa.jinrui.kooboo.site',
->>>>>>> 9343d59503c9e7e638ecbf8fb9f41b10a83e000e
         changeOrigin: true
       }
     }
