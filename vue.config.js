@@ -16,7 +16,9 @@ module.exports = {
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
-      patterns: ['./src/common/style/variable.scss']
+      patterns: [
+        './src/common/style/variable.scss'
+      ]
     },
     i18n: {
       locale: 'zh',
@@ -41,5 +43,8 @@ module.exports = {
       return options
     })
     config.entry.app = ['babel-polyfill', './src/main.js']
-  }
+  },
+  transpileDependencies: [
+    'vuetify'
+  ]
 }

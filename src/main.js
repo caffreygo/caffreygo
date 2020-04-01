@@ -7,6 +7,7 @@ import ELEMENT from 'element-ui'
 import App from './App.vue'
 import 'babel-polyfill'
 import i18n from './plugins/i18n'
+import vuetify from './plugins/vuetify'
 
 Vue.use(ELEMENT)
 Vue.config.productionTip = false
@@ -15,5 +16,6 @@ new Vue({
   router,
   store,
   i18n,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')
