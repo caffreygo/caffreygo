@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css"></link>
+    <link rel="stylesheet" href="<%= process.env.NODE_ENV==='development'?'https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css':'/element-ui/index.css' %>"></link>
   </head>
   <body>
     <noscript>
@@ -14,6 +14,6 @@
     </noscript>
     <div id="app"></div>
     <script src="https://unpkg.com/vue@2.6.11/dist/vue<%= process.env.NODE_ENV==='development'?'.js':'.min.js' %>"></script>
-    <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
+    <script src="<%= process.env.NODE_ENV==='development'?'https://unpkg.com/element-ui@2.13.0/lib/index.js':'/element-ui/index.js' %>"></script>
   </body>
 </html>

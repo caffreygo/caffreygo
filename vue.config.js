@@ -5,6 +5,15 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 module.exports = {
+  devServer: {
+    proxy: {
+      '/api': {
+        target: '',
+        ws: true,
+        changeOrigin: true
+      }
+    }
+  },
   configureWebpack: {
     externals: {
       'vue': 'Vue',
