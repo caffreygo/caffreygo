@@ -7,6 +7,9 @@ Vue.use(Router) // 在vue中注入Router
 const Login = () => import('@c/login/Login')
 const PageHeader = () => import('@c/PageHeader')
 const ScheduleView = () => import('@c/ScheduleView')
+const HeadBar = () => import('@c/HeadBar')
+const AppFooter = () => import('@c/AppFooter')
+const ContentView = () => import('@c/ContentView')
 
 const routes = [
   {
@@ -27,6 +30,18 @@ const routes = [
     components: {
       default: ScheduleView,
       header: PageHeader
+    }
+  },
+  {
+    path: '/vuetify',
+    name: 'vuetify',
+    meta: {
+      requireAuth: true
+    },
+    components: {
+      default: ContentView,
+      header: HeadBar,
+      footer: AppFooter
     }
   }
   // {
