@@ -25,12 +25,6 @@ module.exports = {
       enableInSFC: true
     }
   },
-  configureWebpack: {
-    externals: {
-      vue: 'Vue',
-      'element-ui': 'ELEMENT'
-    }
-  },
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('./src'))

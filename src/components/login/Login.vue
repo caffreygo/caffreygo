@@ -4,7 +4,21 @@
       <img src="../../common/images/logo-white.png" class="icon-logo" />
     </div>
     <div class="login-form-container">
-      <h1>{{ $t('login.title') }}</h1>
+      <div class="block">
+        <span class="demonstration">区分颜色</span>
+        <el-rate v-model="value1" :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
+        </el-rate>
+      </div>
+      <el-button type="primary" icon="el-icon-edit"></el-button>
+      <el-row>
+        <el-button icon="el-icon-search" circle></el-button>
+        <el-button type="primary" icon="el-icon-edit" circle></el-button>
+        <el-button type="success" icon="el-icon-check" circle></el-button>
+        <el-button type="info" icon="el-icon-message" circle></el-button>
+        <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+        <el-button type="danger" icon="el-icon-delete" circle></el-button>
+      </el-row>
+      <h1>{{ $t("login.title") }}</h1>
       <el-form ref="loginForm" :model="loginForm" :rules="rules">
         <el-form-item prop="username">
           <el-input
@@ -23,7 +37,7 @@
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit('loginForm')">{{
-            $t('login')
+            $t("login")
           }}</el-button>
         </el-form-item>
       </el-form>
