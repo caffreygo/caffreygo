@@ -5,6 +5,7 @@ import './plugins/axios'
 import App from './App.vue'
 import 'babel-polyfill'
 import i18n from './plugins/i18n'
+import './plugins/element.js'
 
 Vue.config.productionTip = false
 
