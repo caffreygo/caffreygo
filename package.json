@@ -42,6 +42,21 @@
     "vue-cli-plugin-style-resources-loader": "~0.1.4",
     "vue-template-compiler": "^2.6.11"
   },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions"
