@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import router from './router'
 import store from './store'
-import './plugins/axios'
+import './core/service/axios'
 import ELEMENT from 'element-ui'
 import App from './App.vue'
 import 'babel-polyfill'
-import i18n from './plugins/i18n'
+import i18n from './core/service/i18n'
 
 Vue.use(ELEMENT)
 Vue.config.productionTip = false
