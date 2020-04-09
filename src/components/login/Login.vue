@@ -22,9 +22,11 @@
           ></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit('loginForm')">{{
+          <el-button type="primary" @click="onSubmit('loginForm')">
+            {{
             $t('login')
-          }}</el-button>
+            }}
+          </el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -32,71 +34,71 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapGetters, mapMutations } from "vuex";
 export default {
-  name: 'Login',
-  data () {
+  name: "Login",
+  data() {
     return {
       loginForm: {
-        username: '',
-        password: ''
+        username: "",
+        password: ""
       },
       rules: {
         username: [
           {
             required: true,
-            message: this.$t('login.usernameTips'),
-            trigger: 'change'
+            message: this.$t("login.usernameTips"),
+            trigger: "change"
           }
         ],
         password: [
           {
             required: true,
-            message: this.$t('login.passwordTips'),
-            trigger: 'change'
+            message: this.$t("login.passwordTips"),
+            trigger: "change"
           }
         ]
       }
-    }
+    };
   },
-  created () {},
+  created() {},
   computed: {
-    ...mapGetters('account', ['token'])
+    ...mapGetters("account", ["token"])
   },
   methods: {
     // 获取store内namespace为account下的setToken这个mutations方法
-    ...mapMutations('account', ['setToken']),
-    onSubmit (formName) {
+    ...mapMutations("account", ["setToken"]),
+    onSubmit(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          const data = new FormData()
-          data.append('username', this.loginForm.username)
-          data.append('password', this.loginForm.password)
+          const data = new FormData();
+          data.append("username", this.loginForm.username);
+          data.append("password", this.loginForm.password);
           this.axios
-            .post('/login', data)
+            .post("/login", data)
             .then(res => {
               if (res.data.success) {
-                this.$message.success(this.$t('login.successTips'))
-                const token = res.data.token
+                this.$message.success(this.$t("login.successTips"));
+                const token = res.data.token;
                 if (token) {
-                  this.setToken(res.data.token)
+                  this.setToken(res.data.token);
                 }
-                this.$router.push({ name: 'schedule' })
+                this.$router.push({ name: "schedule" });
               } else {
-                this.$message.error(this.$t('login.failedTips'))
+                this.$message.error(this.$t("login.failedTips"));
               }
             })
             .catch(err => {
-              console.log(err)
-            })
+              console.log(err);
+            });
         }
-      })
+      });
     },
-    resetForm: function (formName) {
-      this.$refs[formName].resetFields()
+    resetForm: function(formName) {
+      this.$refs[formName].resetFields();
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
