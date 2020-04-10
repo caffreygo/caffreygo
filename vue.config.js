@@ -1,10 +1,14 @@
 const path = require('path')
 // const isProduction = process.env.NODE_ENV === 'production';
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
   devServer: {
+    overlay: {
+      warnings: false,
+      errors: false
+    },
     proxy: {
       '/api': {
         target: 'http://oa.jinrui.kooboo.site',
@@ -16,7 +20,7 @@ module.exports = {
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
-      patterns: ['./src/common/style/variable.scss']
+      patterns: ['./src/static/style/variable.scss']
     },
     i18n: {
       locale: 'zh',

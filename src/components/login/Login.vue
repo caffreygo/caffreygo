@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <div class="login-header">
-      <img src="../../common/images/logo-white.png" class="icon-logo" />
+      <img src="../../static/images/logo-white.png" class="icon-logo" />
     </div>
     <div class="login-form-container">
       <h1>{{ $t('login.title') }}</h1>

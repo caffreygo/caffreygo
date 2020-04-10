@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import '@/common/style/common.css'
-import '@/common/style/custom.scss'
+import "@/static/style/common.css";
+import "@/static/style/custom.scss";
 
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style lang="scss">
